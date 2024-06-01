@@ -1,6 +1,6 @@
 <!-- 
 
-Coomon classes from WiliLink which are both used by the client (WikiLink Monitor) and the server (WikiLink Scraper)
+Common classes from WikiLink which are both used by the client (WikiLink Monitor) and the server (WikiLink Scraper)
 
 This README describes the package. If you publish this package to pub.dev,
 this README's contents appear on the landing page for your package.
