@@ -11,3 +11,4 @@ export 'src/log_objects/log_object.dart';
 export 'src/log_objects/log_fetched_page.dart';
 export 'src/log_objects/log_error.dart';
 export 'src/log_objects/log_handled_error.dart';
+export 'src/shortest_path_error.dart';
