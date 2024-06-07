@@ -44,7 +44,7 @@ enum ShortestPathErrorType {
   const ShortestPathErrorType(this.httpStatusCode);
 
   String encode() {
-    return jsonEncode('ShortestPathErrorType.${toString()}');
+    return jsonEncode(toString());
   }
 
   factory ShortestPathErrorType.decode(String json) {
