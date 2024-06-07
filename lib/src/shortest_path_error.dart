@@ -30,6 +30,15 @@ class ShortestPathError {
   String toString() {
     return 'ShortestPathError: ${type.toString()}${message != null ? ': $message' : ''}';
   }
+
+  static bool isJson(String json) {
+    try {
+      Map<String, dynamic> map = jsonDecode(json);
+      return map['error'] == 'ShortestPathError';
+    } catch (e) {
+      return false;
+    }
+  }
 }
 
 enum ShortestPathErrorType {
@@ -44,7 +53,7 @@ enum ShortestPathErrorType {
   const ShortestPathErrorType(this.httpStatusCode);
 
   String encode() {
-    return jsonEncode(toString());
+    return toString();
   }
 
   factory ShortestPathErrorType.decode(String json) {

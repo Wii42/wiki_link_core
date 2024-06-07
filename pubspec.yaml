@@ -1,6 +1,6 @@
 name: wiki_link_core
 description: Classes shared between wikipedia_scraper and wiki_link_monitor.
-version: 0.1.0+2
+version: 0.1.0+3
 repository: https://github.com/Wii42/wiki_link_core
 
 environment:
