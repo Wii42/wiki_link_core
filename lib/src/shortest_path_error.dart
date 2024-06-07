@@ -25,6 +25,11 @@ class ShortestPathError {
       message: map['message'],
     );
   }
+
+  @override
+  String toString() {
+    return 'ShortestPathError: ${type.toString()}${message != null ? ': $message' : ''}';
+  }
 }
 
 enum ShortestPathErrorType {
