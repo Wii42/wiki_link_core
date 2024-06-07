@@ -42,15 +42,16 @@ class ShortestPathError {
 }
 
 enum ShortestPathErrorType {
-  nodeNotFound(HttpStatus.notFound),
-  noPathFound(HttpStatus.unprocessableEntity),
-  internalError(HttpStatus.internalServerError),
-  other(HttpStatus.badRequest),
+  nodeNotFound(HttpStatus.notFound, 'Node not found'),
+  noPathFound(HttpStatus.unprocessableEntity, 'No path found'),
+  internalError(HttpStatus.internalServerError, 'Internal server error'),
+  other(HttpStatus.badRequest, 'Unknown Error'),
   ;
 
   final int httpStatusCode;
+  final String errorNameError;
 
-  const ShortestPathErrorType(this.httpStatusCode);
+  const ShortestPathErrorType(this.httpStatusCode, this.errorNameError);
 
   String encode() {
     return toString();
